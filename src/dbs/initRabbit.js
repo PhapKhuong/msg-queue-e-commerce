@@ -13,7 +13,7 @@ async function connectToRabbitMQ() {
 async function connectToRabbitMQForTest() {
     try {
         const { channel, connection } = await connectToRabbitMQ();
-        const queue = 'Test queue';
+        const queue = 'AN_JA';
         const message = 'Hello An_ja';
         await channel.assertQueue(queue);
         await channel.sendToQueue(queue, Buffer.from(message));
